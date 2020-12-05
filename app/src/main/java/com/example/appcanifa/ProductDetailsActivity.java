@@ -73,14 +73,15 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
         final DatabaseReference cartListRef = FirebaseDatabase.getInstance().getReference().child("Cart List");
         final HashMap<String, Object> cartMap = new HashMap<>();
+
         cartMap.put("pid", productID);
         cartMap.put("pname", productName.getText().toString());
         cartMap.put("price", productPrice.getText().toString());
         cartMap.put("date",saveCurrentDate);
         cartMap.put("time", saveCurrentTime);
         cartMap.put("quantity", numberButton.getNumber());
-
         cartMap.put("discount", "");
+
         cartListRef.child("User View").child(Prevalent.currentOnlineUser.getPhone())
                 .child("Products").child(productID)
                 .updateChildren(cartMap)
