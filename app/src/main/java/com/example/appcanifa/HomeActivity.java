@@ -184,9 +184,10 @@ public class HomeActivity extends AppCompatActivity
             Intent intent = new Intent(HomeActivity.this,CartActivity.class);
             startActivity(intent);
         }
-        else if (id == R.id.nav_order)
+        else if (id == R.id.nav_searchs)
         {
-
+            Intent intent = new Intent(HomeActivity.this,CartActivity.class);
+            startActivity(intent);
         }
         else if (id == R.id.nav_categories)
         {
@@ -194,7 +195,7 @@ public class HomeActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_setting)
         {
-            Intent intent = new Intent(HomeActivity.this, SettinsActivity.class);
+            Intent intent = new Intent(HomeActivity.this, SearchProductsActivity.class);
             startActivity(intent);
         }
         else if (id == R.id.nav_logout)
@@ -210,5 +211,6 @@ public class HomeActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+
     }
 }
