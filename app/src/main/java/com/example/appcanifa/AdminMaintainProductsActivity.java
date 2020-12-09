@@ -24,9 +24,10 @@ import java.util.HashMap;
 
 public class AdminMaintainProductsActivity extends AppCompatActivity
 {
-    private Button applyChangesBtn;
+    private Button applyChangesBtn,deleteBtn;
     private EditText name, price, description;
     private ImageView imageView;
+
     private String productID ="";
     private DatabaseReference productsRef;
 
@@ -36,7 +37,7 @@ public class AdminMaintainProductsActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_maintain_products);
 
-        productID = getIntent().getStringExtra("pig");
+        productID = getIntent().getStringExtra("pid");
         productsRef = FirebaseDatabase.getInstance().getReference().child("Products").child(productID);
 
         applyChangesBtn = findViewById(R.id.apply_changes_btn);
@@ -44,6 +45,7 @@ public class AdminMaintainProductsActivity extends AppCompatActivity
         price = findViewById(R.id.product_price_maintain);
         description = findViewById(R.id.product_description_maintain);
         imageView = findViewById(R.id.product_image_maintain);
+        deleteBtn = findViewById(R.id.delete_product_btn);
 
         displaySpecificProductInfo();
 
@@ -57,6 +59,29 @@ public class AdminMaintainProductsActivity extends AppCompatActivity
 
         });
 
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                deleteThisProduct();
+            }
+        });
+
+    }
+
+    private void deleteThisProduct()
+    {
+        productsRef.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task)
+            {
+                Intent intent = new Intent(AdminMaintainProductsActivity.this, AdminCategoryActivity.class);
+                startActivity(intent);
+                finish();
+
+                Toast.makeText(AdminMaintainProductsActivity.this, "Product is deleted successfully.", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void applyChange() {
@@ -73,16 +98,16 @@ public class AdminMaintainProductsActivity extends AppCompatActivity
             Toast.makeText(this, "Write down Product Description ", Toast.LENGTH_SHORT).show();
         } else {
             HashMap<String, Object> productMap = new HashMap<>();
-            productMap.put("pid",productID);
-            productMap.put("description",pDescription);
-            productMap.put("price",pPrice);
-            productMap.put("pname",pName);
+            productMap.put("pid", productID);
+            productMap.put("description", pDescription);
+            productMap.put("price", pPrice);
+            productMap.put("pname", pName);
 
             productsRef.updateChildren(productMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if(task.isSuccessful()){
-                        Toast.makeText(AdminMaintainProductsActivity.this,"Change applied successfully",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AdminMaintainProductsActivity.this,"Changes applied successfully",Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(AdminMaintainProductsActivity.this, AdminCategoryActivity.class);
                         startActivity(intent);
@@ -98,7 +123,8 @@ public class AdminMaintainProductsActivity extends AppCompatActivity
     productsRef.addValueEventListener(new ValueEventListener() {
         @Override
         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-            if(dataSnapshot.exists()){
+            if(dataSnapshot.exists())
+            {
                 String pName = dataSnapshot.child("pname").getValue().toString();
                 String pPrice = dataSnapshot.child("price").getValue().toString();
                 String pDescription = dataSnapshot.child("description").getValue().toString();

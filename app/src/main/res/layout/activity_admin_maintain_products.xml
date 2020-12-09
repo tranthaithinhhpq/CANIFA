@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="20dp"
     android:layout_marginStart="15dp"
+    android:layout_marginBottom="5dp"
     app:layout_goneMarginEnd="15dp"
     app:cardElevation="15dp"
     tools:context=".AdminMaintainProductsActivity">
@@ -20,9 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_below="@id/product_name"
-            android:scaleType="centerCrop"
             android:layout_marginTop="2dp"
-            />
+            android:scaleType="centerCrop" />
 
         <EditText
             android:id="@+id/product_price_maintain"
@@ -31,10 +31,10 @@
             android:hint="Product Price"
             android:textAlignment="center"
             android:layout_below="@id/product_name_maintain"
-            android:textSize="18dp"
             android:background="@drawable/input_design"
             android:padding="12dp"
             android:layout_margin="5dp"
+            android:textSize="18dp"
             android:textStyle="bold"
             android:textColor="@color/colorPrimaryDark"
             />
@@ -83,6 +83,21 @@
             android:textSize="18dp"
             android:textColor="@android:color/white"
             />
+
+        <Button
+            android:id="@+id/delete_product_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/apply_changes_btn"
+            android:text="Delete This Product"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:padding="12dp"
+            android:layout_margin="30dp"
+            android:background="@drawable/buttons"
+            android:textColor="@android:color/white"
+            />
+
     </RelativeLayout>
 
 
