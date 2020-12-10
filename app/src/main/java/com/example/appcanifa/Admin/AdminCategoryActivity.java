@@ -1,4 +1,4 @@
-package com.example.appcanifa;
+package com.example.appcanifa.Admin;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.appcanifa.HomeActivity;
+import com.example.appcanifa.MainActivity;
+import com.example.appcanifa.R;
 
 public class AdminCategoryActivity extends AppCompatActivity {
     private ImageView tShirts, sportsTshirt, femaleDresses, sweathers;

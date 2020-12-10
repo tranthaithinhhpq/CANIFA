@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.appcanifa.Admin.AdminCategoryActivity;
 import com.example.appcanifa.Model.Users;
 import com.example.appcanifa.Prevalent.Prevalent;
 import com.google.firebase.database.DataSnapshot;
@@ -30,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button LoginButton;
     private ProgressDialog loadingBar;
     private CheckBox chkBoxRememberMe;
-    private TextView Adminlink,NotAdminlink;
+    private TextView Adminlink,NotAdminlink, ForgetPasswordLink;
 
     private String parentDbName = "Users";
 
@@ -44,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         InputPassword = (EditText) findViewById(R.id.login_password_input);
         Adminlink = (TextView)findViewById(R.id.admin_panel_link);
         NotAdminlink = (TextView)findViewById(R.id.not_admin_panel_link);
+        ForgetPasswordLink = findViewById(R.id.forget_password_link);
         loadingBar = new ProgressDialog(this);
         chkBoxRememberMe = (CheckBox)findViewById(R.id.remember_me_chkb);
         Paper.init(this);
@@ -52,6 +54,15 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 LoginUser();
+            }
+        });
+
+        ForgetPasswordLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, ResetPasswordActivity.class);
+                intent.putExtra("check", "login");
+                startActivity(intent);
             }
         });
 
