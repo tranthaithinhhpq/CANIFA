@@ -8,8 +8,8 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.appcanifa.HomeActivity;
-import com.example.appcanifa.MainActivity;
+import com.example.appcanifa.Buyers.HomeActivity;
+import com.example.appcanifa.Buyers.MainActivity;
 import com.example.appcanifa.R;
 
 public class AdminCategoryActivity extends AppCompatActivity {

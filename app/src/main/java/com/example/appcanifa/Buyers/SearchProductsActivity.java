@@ -1,4 +1,4 @@
-package com.example.appcanifa;
+package com.example.appcanifa.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,9 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.SearchView;
 
 import com.example.appcanifa.Model.Products;
+import com.example.appcanifa.R;
 import com.example.appcanifa.ViewHolder.ProductViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;

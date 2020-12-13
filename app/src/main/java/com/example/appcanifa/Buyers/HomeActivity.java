@@ -1,4 +1,4 @@
-package com.example.appcanifa;
+package com.example.appcanifa.Buyers;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.appcanifa.Admin.AdminMaintainProductsActivity;
 import com.example.appcanifa.Model.Products;
 import com.example.appcanifa.Prevalent.Prevalent;
+import com.example.appcanifa.R;
 import com.example.appcanifa.ViewHolder.ProductViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -74,7 +75,7 @@ public class HomeActivity extends AppCompatActivity
             public void onClick(View view) {
                 if(!type.equals("Admin"))
                 {
-                    Intent intent = new Intent(HomeActivity.this,CartActivity.class);
+                    Intent intent = new Intent(HomeActivity.this, CartActivity.class);
                     startActivity(intent);
                 }
             }
@@ -221,7 +222,7 @@ public class HomeActivity extends AppCompatActivity
         {
             if(!type.equals("Admin"))
             {
-                Intent intent = new Intent(HomeActivity.this,SearchProductsActivity.class);
+                Intent intent = new Intent(HomeActivity.this, SearchProductsActivity.class);
                 startActivity(intent);
             }
 

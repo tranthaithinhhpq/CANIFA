@@ -1,4 +1,4 @@
-package com.example.appcanifa;
+package com.example.appcanifa.Buyers;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.appcanifa.Admin.AdminCategoryActivity;
 import com.example.appcanifa.Model.Users;
 import com.example.appcanifa.Prevalent.Prevalent;
+import com.example.appcanifa.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;

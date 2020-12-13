@@ -1,8 +1,7 @@
-package com.example.appcanifa;
+package com.example.appcanifa.Buyers;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.media.audiofx.PresetReverb;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -17,6 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.appcanifa.Prevalent.Prevalent;
+import com.example.appcanifa.R;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -30,8 +30,6 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 import com.squareup.picasso.Picasso;
 import com.theartofdev.edmodo.cropper.CropImage;
-
-import org.w3c.dom.Text;
 
 import java.util.HashMap;
 

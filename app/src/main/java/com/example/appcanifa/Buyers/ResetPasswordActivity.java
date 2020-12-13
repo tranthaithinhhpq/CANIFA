@@ -1,4 +1,4 @@
-package com.example.appcanifa;
+package com.example.appcanifa.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -13,8 +13,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.appcanifa.Model.Users;
 import com.example.appcanifa.Prevalent.Prevalent;
+import com.example.appcanifa.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
