@@ -7,15 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".Sellers.SellerRegistrationActivity">
 
-
     <ImageView
         android:id="@+id/img_seller"
-        android:layout_width="401dp"
-        android:layout_height="178dp"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:src="@drawable/doramon"
         android:scaleType="centerCrop"
-        android:src="@drawable/sellerregister"
-
         />
+
+
 
     <TextView
          android:id="@+id/title_seller"
@@ -24,11 +24,11 @@
          android:layout_height="wrap_content"
           android:text="Seller Registration Form "
           android:gravity="center"
-          android:layout_below="@+id/img_seller"
          android:layout_margin="20dp"
           android:textStyle="bold"
           android:textSize="24dp"
          android:textColor="@android:color/holo_green_light"
+        android:layout_below="@id/img_seller"
 
          />
 
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/title_seller"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="0dp"
         android:layout_marginRight="15dp"
         android:hint="Name..."
         android:inputType="text"
@@ -54,16 +54,16 @@
         android:hint="Phone..."
         android:inputType="number"
         android:textSize="12dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
          />
 
     <EditText
         android:id="@+id/seller_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/seller_name"
+        android:layout_below="@id/seller_phone"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="5dp"
         android:layout_marginRight="15dp"
         android:hint="Email..."
         android:inputType="textEmailAddress"
@@ -73,9 +73,9 @@
         android:id="@+id/seller_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/seller_phone"
+        android:layout_below="@id/seller_email"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="5dp"
         android:layout_marginRight="15dp"
         android:hint="Password..."
         android:inputType="text"
@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/seller_password"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="5dp"
         android:layout_marginRight="15dp"
         android:hint="Shop-Bussiness Address...."
         android:inputType="textEmailAddress"
@@ -99,7 +99,7 @@
         android:layout_height="28dp"
         android:layout_below="@+id/seller_address"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
         android:background="@android:color/white"
         android:text="Register"
@@ -113,9 +113,9 @@
         android:id="@+id/seller_already_have_account_btn"
         android:layout_width="377dp"
         android:layout_height="28dp"
-        android:layout_below="@+id/seller_address"
+        android:layout_below="@+id/seller_register_btn"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="57dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
         android:background="@android:color/holo_green_dark"
         android:text="Already have an Account ?"
