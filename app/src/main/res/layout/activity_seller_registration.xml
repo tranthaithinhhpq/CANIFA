@@ -78,7 +78,7 @@
         android:layout_marginTop="45dp"
         android:layout_marginRight="15dp"
         android:hint="Password..."
-        android:inputType="text"
+        android:inputType="textPassword"
         android:textSize="12dp" />
 
     <EditText
