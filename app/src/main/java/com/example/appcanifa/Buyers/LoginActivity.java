@@ -14,7 +14,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.appcanifa.Admin.AdminCategoryActivity;
+import com.example.appcanifa.Admin.AdminHomeActivity;
+import com.example.appcanifa.Sellers.SellerProductCategoryActivity;
 import com.example.appcanifa.Model.Users;
 import com.example.appcanifa.Prevalent.Prevalent;
 import com.example.appcanifa.R;
@@ -130,7 +131,7 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "Welcome Admin,logged in successfully...", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
-                                Intent intent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, AdminHomeActivity.class);
                                 startActivity(intent);
 
                             }else if (parentDbName.equals("Users")){

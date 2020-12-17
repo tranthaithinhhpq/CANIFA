@@ -58,7 +58,7 @@
          />
 
     <EditText
-        android:id="@+id/seller_email"
+        android:id="@+id/seller_login_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/seller_phone"
@@ -70,10 +70,10 @@
         android:textSize="12dp" />
 
     <EditText
-        android:id="@+id/seller_password"
+        android:id="@+id/seller__login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/seller_email"
+        android:layout_below="@id/seller_login_email"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="15dp"
@@ -85,7 +85,7 @@
         android:id="@+id/seller_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/seller_password"
+        android:layout_below="@id/seller__login_password"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="15dp"
@@ -94,7 +94,7 @@
         android:textSize="12dp" />
 
     <Button
-        android:id="@+id/seller_register_btn"
+        android:id="@+id/seller_login_btn"
         android:layout_width="377dp"
         android:layout_height="28dp"
         android:layout_below="@+id/seller_address"
@@ -113,7 +113,7 @@
         android:id="@+id/seller_already_have_account_btn"
         android:layout_width="377dp"
         android:layout_height="28dp"
-        android:layout_below="@+id/seller_register_btn"
+        android:layout_below="@+id/seller_login_btn"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"

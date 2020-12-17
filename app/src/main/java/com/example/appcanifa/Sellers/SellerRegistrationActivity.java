@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.appcanifa.Buyers.MainActivity;
 import com.example.appcanifa.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -41,10 +40,10 @@ public class SellerRegistrationActivity extends AppCompatActivity {
          sellerLoginBegin = findViewById(R.id.seller_already_have_account_btn);
          nameInput = (EditText)findViewById(R.id.seller_name);
         phoneInput = (EditText)findViewById(R.id.seller_phone);
-        emailInput = (EditText)findViewById(R.id.seller_email);
-        passwordInput = (EditText)findViewById(R.id.seller_password);
+        emailInput = (EditText)findViewById(R.id.seller_login_email);
+        passwordInput = (EditText)findViewById(R.id.seller__login_password);
         addressInput = (EditText)findViewById(R.id.seller_address);
-        registerButton = (Button) findViewById(R.id.seller_register_btn);
+        registerButton = (Button) findViewById(R.id.seller_login_btn);
 
 
      sellerLoginBegin.setOnClickListener(new View.OnClickListener() {
