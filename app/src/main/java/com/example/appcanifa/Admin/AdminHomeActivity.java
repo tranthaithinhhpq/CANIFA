@@ -55,7 +55,8 @@ public class AdminHomeActivity extends AppCompatActivity
             }
         });
 
-        checkApproveProductsBtn.setOnClickListener(new View.OnClickListener() {
+        checkApproveProductsBtn.setOnClickListener
+                (new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(AdminHomeActivity.this, AdminCheckNewProductsActivity.class);
