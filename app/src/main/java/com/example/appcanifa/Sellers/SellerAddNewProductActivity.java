@@ -125,7 +125,7 @@ public class SellerAddNewProductActivity extends AppCompatActivity {
 
     private void StoreProductInformation() {
         loadingBar.setTitle("Add New Product");
-        loadingBar.setMessage("Dear Admin,please wait,white we are adding the new product...");
+        loadingBar.setMessage("Dear Seller ,please wait,white we are adding the new product.");
         loadingBar.setCanceledOnTouchOutside(false);
         loadingBar.show();
         Calendar calendar = Calendar.getInstance();
