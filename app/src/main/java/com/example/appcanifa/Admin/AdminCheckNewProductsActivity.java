@@ -43,6 +43,7 @@ public class AdminCheckNewProductsActivity extends AppCompatActivity
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
     }
+
     protected void Onstart()
         {
              super.onStart();
@@ -52,39 +53,36 @@ public class AdminCheckNewProductsActivity extends AppCompatActivity
            FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter =
                    new FirebaseRecyclerAdapter<Products, ProductViewHolder>(options) {
                @Override
-               protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull final Products model) {
+               protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull Products model) {
                    holder.txtProductName.setText(model.getPname());
                    holder.txtProductDescription.setText(model.getDescription());
                    holder.txtProductPrice.setText("Price = " + model.getPrice() + "$");
                    Picasso.get().load(model.getImage()).into(holder.imageView);
 
-                            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                   final Products itemClick = model;
+                            holder.setItemClickListner(new ItemClickListner() {
                                 @Override
-                                public void onClick(View v) {
-                                        final String productID =  model.getPid();
-                                        CharSequence options [] = new CharSequence[]
-                                                {
-                                                        "Yes" ,
-                                                        "No"
-                                                };
-                                        AlertDialog.Builder builder =
-                                                new AlertDialog.Builder(AdminCheckNewProductsActivity.this);
-                                        builder.setTitle("Do you want to Approved this product.Are you Sure ?");
-                                        builder.setItems(options, new DialogInterface.OnClickListener() {
-                                            @Override
-                                            public void onClick(DialogInterface dialogInterface, int position) {
-                                                if (position == 0) {
-                                                    ChangeProductsState(productID);
-                                                }
-                                                if (position == 1)
-                                                {
-                                                }
-
-                                            }
-                                        });
-                                        builder.show();
-
-
+                                public void onClick(View view, final int position, boolean isLongClick) {
+                                    final String productID =itemClick.getPid();
+                                     CharSequence options [] = new CharSequence[]
+                                             {
+                                                     "Yes" ,
+                                                      "No"
+                                             };
+                           AlertDialog.Builder builder =
+                                    new AlertDialog.Builder(AdminCheckNewProductsActivity.this);
+                                    builder.setTitle("Do you want to Approved this product.Are you Sure ?");
+                                builder.setItems(options, new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int position) {
+                                        if (position == 0) {
+                                            ChangeProductsState(productID);
+                                        }
+                                        if (position == 1) {
+                                        }
+                                    }
+                                });
+                                 builder.show();
                                  }
                             });
                }
@@ -94,7 +92,7 @@ public class AdminCheckNewProductsActivity extends AppCompatActivity
                public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                    View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_items_layout,parent ,false);
                    ProductViewHolder holder = new ProductViewHolder(view);
-                   return holder;
+                   return null;
                }
            };
             recyclerView.setAdapter(adapter);
