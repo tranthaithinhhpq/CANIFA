@@ -1,11 +1,11 @@
 package com.example.appcanifa.Admin;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.appcanifa.Buyers.HomeActivity;
 import com.example.appcanifa.Buyers.MainActivity;
@@ -58,7 +58,7 @@ public class AdminHomeActivity extends AppCompatActivity
         checkApproveProductsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(AdminHomeActivity.this, AdminNewOrdersActivity.class);
+                Intent intent = new Intent(AdminHomeActivity.this, AdminCheckNewProductsActivity.class);
                 startActivity(intent);
             }
         });
