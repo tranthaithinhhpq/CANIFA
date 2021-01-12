@@ -10,6 +10,6 @@
     <!--Checkbox style for colored checkbox-->
     <style name="colored_checkBox" parent="Theme.AppCompat.Light.NoActionBar">
         <item name= "colorAccent">@android:color/white</item>
-        <item name= "android:textColorSecondary">@color/colorPrimaryDark</item>
+        <item name= "android:textColorSecondary">@color/colorPrimary</item>
     </style>
 </resources>

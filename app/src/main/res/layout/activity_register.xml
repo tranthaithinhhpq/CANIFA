@@ -4,88 +4,144 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/register"
+    android:background="@drawable/bg4"
     tools:context=".Buyers.RegisterActivity">
 
     <ImageView
-        android:id="@+id/register_applogo"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:src="@drawable/applogo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="190dp"/>
+    android:id="@+id/register_applogo"
+    android:layout_width="wrap_content"
+    android:layout_height="374dp"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginStart="-99dp"
+    android:layout_marginTop="44dp"
+    android:src="@drawable/dochoi" />
+
+    <ImageView
+        android:id="@+id/login_bg"
+        android:layout_width="match_parent"
+        android:layout_height="403dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="341dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/background_white" />
+
+    <TextView
+        android:id="@+id/creatacc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_applogo"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="-71dp"
+        android:fontFamily="@font/baloo"
+        android:text="Create your"
+        android:textColor="@color/colorBlack"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/creatacc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_applogo"
+        android:layout_marginTop="-72dp"
+        android:layout_marginLeft="170dp"
+        android:fontFamily="@font/baloo"
+        android:text="Free Account"
+        android:textColor="@color/colorPrimary"
+        android:textSize="27dp"
+        />
 
     <EditText
         android:id="@+id/register_username_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/register_applogo"
-        android:background="@drawable/input_design"
-        android:padding="20dp"
+        android:layout_below="@+id/creatacc"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="3dp"
         android:layout_marginRight="15dp"
+        android:background="@drawable/input_design"
+        android:fontFamily="@font/baloo"
         android:hint="Name"
         android:inputType="text"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        />
+        android:padding="20dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="17sp" />
 
     <EditText
         android:id="@+id/register_phone_number_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_username_input"
-        android:background="@drawable/input_design"
-        android:padding="20dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
+        android:background="@drawable/input_design"
+        android:fontFamily="@font/baloo"
         android:hint="Phone Number"
         android:inputType="number"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
-        android:layout_marginTop="10dp"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        />
+        android:padding="20dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="17sp" />
 
     <EditText
         android:id="@+id/register_password_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/register_phone_number_input"
-        android:background="@drawable/input_design"
-        android:padding="20dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
         android:layout_marginTop="6dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/input_design"
+        android:fontFamily="@font/baloo"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
-        android:textSize="17sp"
-        android:textStyle="bold"
-        />
+        android:padding="20dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="17sp" />
 
+    <TextView
+        android:id="@+id/accept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_password_input"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/baloo"
+        android:text="By creating account, you agree with Cafina"
+        android:textColor="@color/colorBlack"
+        android:textSize="13dp" />
 
-
+    <TextView
+        android:id="@+id/accept1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_password_input"
+        android:layout_marginLeft="277dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/baloo"
+        android:text="Terms of Service"
+        android:textColor="@color/colorPrimary"
+        android:textSize="13dp" />
 
     <Button
         android:id="@+id/register_btn"
-        android:layout_width="match_parent"
+        android:layout_width="209dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/accept"
+        android:layout_marginLeft="190dp"
         android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/buttons"
+        android:fontFamily="@font/baloo"
         android:padding="17dp"
+        android:text="Create Account"
         android:textAllCaps="false"
-        android:textSize="18dp"
-        android:layout_below="@+id/register_password_input"
-        android:text="Creat Account"
         android:textColor="@android:color/white"
-        />
+        android:textSize="18dp" />
 
 
 </RelativeLayout>

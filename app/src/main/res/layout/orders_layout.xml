@@ -16,10 +16,10 @@
             android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
+            android:fontFamily="@font/baloo"
             android:text="UserName"
             android:textColor="@color/colorWhite"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/order_phone_number"
@@ -27,61 +27,61 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_marginRight="2dp"
+            android:fontFamily="@font/baloo"
             android:text="Phone Number"
             android:textAlignment="viewEnd"
             android:textColor="@color/colorWhite"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/order_total_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cart_product_quantity"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/baloo"
             android:gravity="center"
             android:text="Total Price"
             android:textColor="@color/colorWhite"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:layout_marginTop="25dp"/>
+            android:textSize="18dp" />
 
         <TextView
             android:id="@+id/order_address_city"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/order_total_price"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/baloo"
             android:gravity="center"
             android:text="Address, City"
             android:textColor="@color/colorWhite"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"/>
+            android:textSize="18dp" />
 
         <TextView
             android:id="@+id/order_date_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/order_address_city"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/baloo"
             android:gravity="center"
             android:text="Date Time"
             android:textColor="@color/colorWhite"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"/>
+            android:textSize="18dp" />
 
         <Button
             android:id="@+id/show_all_products_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_below="@+id/order_date_time"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="22dp"
             android:layout_marginRight="20dp"
+            android:background="@drawable/background_white"
+            android:fontFamily="@font/baloo"
             android:text="Show This Order Products"
             android:textColor="@color/colorPrimaryDark"
-            android:textSize="18dp"
-            android:background="@android:color/white"
-            android:layout_below="@+id/order_date_time"
-            />
+            android:textSize="18dp" />
 
     </RelativeLayout>
 
