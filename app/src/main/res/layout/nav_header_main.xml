@@ -26,14 +26,13 @@
         android:id="@+id/user_profile_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="4dp"
-        android:fontFamily="@font/baloo"
-        android:gravity="center"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="User Name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:gravity="center"
+        android:text="User Name"
+        android:layout_marginLeft="4dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 
 </LinearLayout>

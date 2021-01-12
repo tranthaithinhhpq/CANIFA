@@ -6,52 +6,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg6"
     tools:context=".Sellers.SellerLoginActivity">
 
-
-    <ImageView
-        android:id="@+id/login_bg"
-        android:layout_width="374dp"
-        android:layout_height="258dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="429dp"
-        android:layout_marginEnd="9dp"
-        android:background="@drawable/background_white" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="491dp"
-        android:layout_alignWithParentIfMissing="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="-21dp"
-        android:layout_marginLeft="-21dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="-11dp"
-        android:layout_marginRight="0dp"
-        android:foreground="@drawable/housenoel"
-        app:srcCompat="@drawable/housenoel"
-        tools:srcCompat="@drawable/housenoel" />
 
     <TextView
         android:id="@+id/title_seller"
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView"
-        android:layout_marginTop="-60dp"
-        android:layout_marginBottom="15dp"
-        android:fontFamily="@font/pacifico"
+        android:layout_below="@+id/img_seller"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="20dp"
         android:gravity="center"
-        android:text="Seller Login Form"
+        android:text="Seller Login Form "
+        android:textColor="@android:color/holo_green_light"
 
-        android:textColor="@color/colorPrimary"
-        android:textSize="36sp" />
-
+        android:textSize="24dp"
+        android:textStyle="bold" />
     <EditText
         android:id="@+id/seller_login_email"
         android:layout_width="match_parent"
@@ -60,38 +31,42 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="2dp"
         android:layout_marginRight="15dp"
-        android:fontFamily="@font/baloo"
         android:hint="Email..."
         android:inputType="text"
-        android:textSize="16dp" />
+        android:textSize="12dp" />
 
     <EditText
         android:id="@+id/seller__login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/seller_login_email"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
-        android:fontFamily="@font/baloo"
+        android:layout_below="@id/seller_login_email"
         android:hint="Password..."
         android:inputType="textPassword"
-        android:textSize="16dp" />
-
+        android:textSize="12dp"
+        android:layout_marginTop="10dp"
+        />
     <Button
         android:id="@+id/seller_login_btn"
-        android:layout_width="230dp"
-        android:layout_height="59dp"
-        android:layout_below="@+id/seller__login_password"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_width="377dp"
+        android:layout_height="28dp"
+        android:layout_below="@+id/seller_address"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="297dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/buttons"
-        android:fontFamily="@font/baloo"
-        android:text="Login"
-        android:textAllCaps="true"
-        android:textColor="@color/colorWhite"
-        android:textSize="25dp" />
+        android:background="@android:color/holo_blue_light"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textSize="12dp"
+        />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        android:foreground="@drawable/sellerlogin"
+        app:srcCompat="@drawable/sellerlogin"
+        tools:srcCompat="@drawable/sellerlogin" />
 </RelativeLayout>
 

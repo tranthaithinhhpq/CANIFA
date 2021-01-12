@@ -4,88 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg3"
+    android:background="@drawable/login"
     tools:context=".Buyers.LoginActivity">
 
     <ImageView
-        android:id="@+id/login_applogo"
-        android:layout_width="match_parent"
-        android:layout_height="326dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="83dp"
-        android:layout_marginEnd="0dp"
-        android:src="@drawable/tuanloc" />
-
-    <ImageView
-        android:id="@+id/login_bg"
-        android:layout_width="398dp"
-        android:layout_height="316dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="393dp"
-        android:layout_marginEnd="13dp"
-        android:background="@drawable/background_white" />
-
-    <TextView
-        android:id="@+id/letlogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login_applogo"
-        android:layout_marginLeft="30dp"
-        android:fontFamily="@font/baloo"
-        android:text="Let's"
-        android:textColor="@color/colorBlack"
-        android:textSize="25dp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/letlogin1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login_applogo"
-        android:layout_marginLeft="93dp"
-        android:fontFamily="@font/baloo"
-        android:text="Start"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="25dp"
-        android:textStyle="bold" />
+    android:id="@+id/login_applogo"
+    android:layout_width="300dp"
+    android:layout_height="100dp"
+    android:src="@drawable/applogo"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="200dp"/>
 
     <EditText
         android:id="@+id/login_phone_number_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/letlogin"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginRight="15dp"
+        android:layout_below="@+id/login_applogo"
         android:background="@drawable/input_design"
-        android:fontFamily="@font/baloo"
+        android:padding="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:hint="Phone Number"
         android:inputType="number"
-        android:padding="20dp"
-        android:textColor="@color/colorPrimary"
-        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorPrimaryDark"
         android:textSize="17sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        />
 
     <EditText
         android:id="@+id/login_password_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_phone_number_input"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginRight="15dp"
         android:background="@drawable/input_design"
-        android:fontFamily="@font/baloo"
+        android:padding="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="6dp"
         android:hint="Password"
         android:inputType="textPassword"
-        android:padding="20dp"
-        android:textColor="@color/colorPrimary"
-        android:textColorHint="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorPrimaryDark"
         android:textSize="17sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        />
 
     <LinearLayout
         android:id="@+id/linear_layout_1"
@@ -95,85 +58,77 @@
         android:layout_below="@+id/login_password_input"
         android:layout_marginTop="5dp"
         >
-
         <CheckBox
             android:id="@+id/remember_me_chkb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="17dp"
-            android:button="@drawable/image_checkbox"
-            android:fontFamily="@font/baloo"
-            android:gravity="center_vertical"
-            android:padding="5dp"
             android:text="Remember me"
-            android:textColor="@color/colorPrimary"
+            android:padding="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_vertical"
+            android:button="@drawable/image_checkbox"
             android:textSize="16dp"
-            android:textStyle="bold" />
-
+            android:textStyle="bold"
+            android:layout_marginLeft="17dp"
+            />
         <TextView
             android:id="@+id/forget_password_link"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="90dp"
-            android:fontFamily="@font/baloo"
-            android:text="Forgot Password?"
-            android:textColor="@color/colorPrimary"
+            android:text="Forget Password?"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="17dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginLeft="70dp"
+            />
 
     </LinearLayout>
-
-
     <Button
         android:id="@+id/login_btn"
-        android:layout_width="224dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linear_layout_1"
-        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="13dp"
+        android:layout_marginRight="15dp"
         android:background="@drawable/buttons"
-        android:fontFamily="@font/baloo"
         android:padding="17dp"
-        android:text="Login"
         android:textAllCaps="false"
+        android:textSize="18dp"
+        android:text="Login"
         android:textColor="@android:color/white"
-        android:textSize="18dp" />
+        />
+
 
     <TextView
         android:id="@+id/admin_panel_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/login_btn"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="-52dp"
-        android:layout_marginEnd="259dp"
-        android:layout_marginRight="259dp"
-        android:fontFamily="@font/baloo"
         android:text="I'm an Admin"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/login_btn"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginLeft="80dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_alignParentRight="true" />
 
     <TextView
         android:id="@+id/not_admin_panel_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/login_btn"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="-7dp"
-        android:layout_marginRight="225dp"
-        android:fontFamily="@font/baloo"
         android:text="I'm not an Admin"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/login_btn"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:visibility="invisible" />
+        android:layout_marginStart="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="25dp"
+        android:layout_alignParentLeft="true"
+        android:visibility="invisible"/>
 </RelativeLayout>
